@@ -237,7 +237,7 @@ function M.blame()
 
   local blame_cmd = "git -C "
     .. git_root
-    .. " --literal-pathspecs --no-pager -c blame.coloring=none -c blame.blankBoundary=false blame --show-number -- "
+    .. " --literal-pathspecs --no-pager -c blame.coloring=none -c blame.blankBoundary=false blame --date=short --show-number -- "
     .. fpath
 
   local lines = {}

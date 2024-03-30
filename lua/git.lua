@@ -20,7 +20,7 @@ local function config_keymaps()
 end
 
 local function config_commands()
-  vim.api.nvim_create_user_command("GitBlame", 'lua require("git.blame").blame()<CR>', {
+  vim.api.nvim_create_user_command("GitBlameFile", 'lua require("git.blame").blame()<CR>', {
     bang = true,
     nargs = "*",
   })

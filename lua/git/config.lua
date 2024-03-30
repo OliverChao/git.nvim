@@ -4,13 +4,6 @@ M.config = {}
 
 local default_keymaps_cfg = {
   blame = "<Leader>gb",
-  browse = "<Leader>go",
-  open_pull_request = "<Leader>gp",
-  create_pull_request = "<Leader>gn",
-  diff = "<Leader>gd",
-  diff_close = "<Leader>gD",
-  revert = "<Leader>gr",
-  revert_file = "<Leader>gR",
 }
 
 local default_cfg = {
@@ -19,9 +12,6 @@ local default_cfg = {
     quit_blame = "q",
     blame_commit = "<CR>",
   },
-  target_branch = "master",
-  private_gitlabs = {},
-  winbar = false
 }
 
 function M.is_private_gitlab(host)
