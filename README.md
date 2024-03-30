@@ -1,5 +1,7 @@
 # git.nvim
 
+> This is just for me cause I will remove most of functions except only what I needed. Use the original reop please.
+
 git.nvim is the simple clone of the plugin [vim-fugitive](https://github.com/tpope/vim-fugitive) which is written in Lua.
 
 ## Install
@@ -39,13 +41,13 @@ For more information please refer this [file](https://github.com/dinhhuy258/git.
 For the basic setup with default configurations
 
 ```lua
-require('git').setup()
+require("git").setup()
 ```
 
 Configuration can be passed to the setup function. Here is an example with most of the default settings:
 
 ```lua
-require('git').setup({
+require("git").setup {
   default_mappings = true, -- NOTE: `quit_blame` and `blame_commit` are still merged to the keymaps even if `default_mappings = false`
 
   keymaps = {
@@ -76,15 +78,14 @@ require('git').setup({
   private_gitlabs = { "https://xxx.git.com" },
   -- Enable winbar in all windows created by this plugin
   winbar = false,
-})
-
+}
 ```
 
 ## Command
 
 `:Git` run git command in terminal
 
-Eg: 
+Eg:
 `:Git checkout -b test`
 
 `:GitBlame` opens git blame window
@@ -95,7 +96,7 @@ Eg:
 
 `:GitCreatePullRequest` create pull request in git repository, the default target branch is set in the `target_branch` option. If you provide the branch then the default `target_branch` will be ignored
 
-Eg: 
+Eg:
 `:GitCreatePullRequest`
 `:GitCreatePullRequest test_branch`
 
