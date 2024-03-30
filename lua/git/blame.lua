@@ -93,7 +93,7 @@ local function on_blame_done(lines)
 
   vim.api.nvim_buf_set_lines(blame_buf, 0, -1, true, lines)
   vim.api.nvim_buf_set_option(blame_buf, "modifiable", false)
-  vim.api.nvim_win_set_width(blame_win, blameLinechars() + 1)
+  vim.api.nvim_win_set_width(blame_win, blameLinechars() + 3)
 
   vim.cmd("execute " .. tostring(current_top))
   vim.cmd "normal! zt"
